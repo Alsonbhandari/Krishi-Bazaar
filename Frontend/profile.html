@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Profile - Krishi Bazaar</title>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/profile.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<header>
+    <nav>
+        <div class="logo">
+            <img src="images/logo.png" alt="Krishi Bazaar Logo">
+            <h1>Krishi Bazaar</h1>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <i class="fas fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="profile.html" class="active">My Profile</a></li>
+                <li><a href="index.html" class="btn-login">Logout</a></li>
+            </ul>
+        </div>
+        <i class="fas fa-bars" onclick="showMenu()"></i>
+    </nav>
+</header>
+
+<div class="profile-container">
+    <div class="profile-header">
+        <img src="images/farmer1.jpg" alt="Profile Picture" class="profile-avatar">
+        <div class="profile-info">
+            <h1 class="profile-name">Manish Puri</h1>
+            <div class="profile-type">Farmer</div>
+            <div class="profile-meta">
+                <div class="meta-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Ithari, Sunsari</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-user-check"></i>
+                    <span>Verified Seller</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-star"></i>
+                    <span>4.8 Rating</span>
+                </div>
+            </div>
+        </div>
+        <div class="profile-actions">
+            <button class="edit-profile" id="edit-profile-btn"><i class="fas fa-edit"></i> Edit Profile</button>
+        </div>
+    </div>
+    
+    <div class="profile-tabs">
+        <div class="tabs">
+            <div class="tab active" data-tab="personal">Personal Information</div>
+            <div class="tab" data-tab="payment">Payment Methods</div>
+            <div class="tab" data-tab="address">Addresses</div>
+            <div class="tab" data-tab="security">Security</div>
+        </div>
+        
+        <div class="tab-content active" id="personal-content">
+            <div class="profile-section">
+                <h2 class="section-title">Personal Information</h2>
+                
+                <div class="info-display" id="info-display">
+                    <div class="info-group">
+                        <div class="info-label">Full Name</div>
+                        <div class="info-value">manish Puri</div>
+                    </div>
+                    <div class="info-group">
+                        <div class="info-label">Email</div>
+                        <div class="info-value">Manishpuri@example.com</div>
+                    </div>
+                    <div class="info-group">
+                        <div class="info-label">Phone</div>
+                        <div class="info-value">+977 9804040404</div>
+                    </div>
+                    <div class="info-group">
+                        <div class="info-label">Location</div>
+                        <div class="info-value">Itahari, sunsari</div>
+                    </div>
+                    <div class="info-group">
+                        <div class="info-label">Farming Experience</div>
+                        <div class="info-value">15 years</div>
+                    </div>
+                    <div class="info-group">
+                        <div class="info-label">Farm Size</div>
+                        <div class="info-value">10 acres</div>
+                    </div>
+                    <div class="info-group">
+                        <div class="info-label">Specialization</div>
+                        <div class="info-value">Organic Vegetables</div>
+                    </div>
+                    <div class="info-group">
+                        <div class="info-label">Bio</div>
+                        <div class="info-value">I am an experienced organic farmer with a passion for sustainable agriculture. I specialize in growing vegetables without chemical pesticides and fertilizers.</div>
+                    </div>
+                </div>
+                
+                <div class="edit-form" id="edit-form">
+                    <form id="profile-form">
+                        <div class="form-group">
+                            <label for="full-name">Full Name</label>
+                            <input type="text" id="full-name" value="Manish Puri" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" value="manishpuri@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" value="+977 9804040404" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <input type="text" id="location" value="Ithari, sunsari" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="experience">Farming Experience (years)</label>
+                            <input type="number" id="experience" value="15" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="farm-size">Farm Size (acres)</label>
+                            <input type="number" id="farm-size" value="10" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="specialization">Specialization</label>
+                            <input type="text" id="specialization" value="Organic Vegetables" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="bio">Bio</label>
+                            <textarea id="bio" required>I am an experienced organic farmer with a passion for sustainable agriculture. I specialize in growing vegetables without chemical pesticides and fertilizers.</textarea>
+                        </div>
+                        <div class="form-actions">
+                            <button type="button" class="cancel-btn" id="cancel-edit">Cancel</button>
+                            <button type="submit" class="save-btn">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-content" id="payment-content">
+            <div class="profile-section">
+                <h2 class="section-title">Payment Methods</h2>
+                
+                <div class="payment-methods">
+                    <div class="payment-card default">
+                        <div class="default-badge">Default</div>
+                        <div class="card-type">
+                            <i class="fab fa-cc-visa"></i>
+                            <span>Visa ending in 4242</span>
+                        </div>
+                        <div class="card-number">**** **** **** 4242</div>
+                        <div class="card-expiry">Expires 12/2025</div>
+                        <div class="card-actions">
+                            <button>Edit</button>
+                            <button>Remove</button>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-card">
+                        <div class="card-type">
+                            <i class="fab fa-cc-mastercard"></i>
+                            <span>Mastercard ending in 5678</span>
+                        </div>
+                        <div class="card-number">**** **** **** 5678</div>
+                        <div class="card-expiry">Expires 08/2024</div>
+                        <div class="card-actions">
+                            <button>Make Default</button>
+                            <button>Edit</button>
+                            <button>Remove</button>
+                        </div>
+                    </div>
+                    
+                    <div class="add-payment">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>Add Payment Method</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-content" id="address-content">
+            <div class="profile-section">
+                <h2 class="section-title">Addresses</h2>
+                
+                <div class="address-list">
+                    <div class="info-group">
+                        <div class="info-label">Farm Address</div>
+                        <div class="info-value">
+                            Itahari-05 <br>
+                            Sunsari <br>
+                            Nepal
+                        </div>
+                    </div>
+                    
+                    <div class="info-group">
+                        <div class="info-label">Shipping Address</div>
+                        <div class="info-value">
+                            Itahari-05<br>
+                            Sunsari<br>
+                            Nepal
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-content" id="security-content">
+            <div class="profile-section">
+                <h2 class="section-title">Security Settings</h2>
+                
+                <div class="info-group">
+                    <div class="info-label">Password</div>
+                    <div class="info-value">
+                        ********
+                        <button class="edit-btn">Change Password</button>
+                    </div>
+                </div>
+                
+                <div class="info-group">
+                    <div class="info-label">Two-Factor Authentication</div>
+                    <div class="info-value">
+                        <div class="toggle-switch">
+                            <input type="checkbox" id="two-factor" checked>
+                            <label for="two-factor"></label>
+                        </div>
+                        Enabled
+                    </div>
+                </div>
+                
+                <div class="info-group">
+                    <div class="info-label">Login History</div>
+                    <div class="info-value">
+                        <a href="#">View Login History</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h3>About Krishi Bazaar</h3>
+            <p>Krishi Bazaar is a platform dedicated to connecting farmers directly with retailers, eliminating middlemen and ensuring better prices for all.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+        </div>
+        <div class="footer-section contact">
+            <h3>Contact Us</h3>
+            <p><i class="fas fa-map-marker-alt"></i> 123 Agri Lane, Farmville, India</p>
+            <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+            <p><i class="fas fa-envelope"></i> info@krishibazaar.com</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2023 Krishi Bazaar. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Tab switching
+        const tabs = document.querySelectorAll('.tab');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Update active tab
+                tabs.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Show corresponding tab content
+                const tabId = this.getAttribute('data-tab');
+                tabContents.forEach(content => content.classList.remove('active'));
+                document.getElementById(`${tabId}-content`).classList.add('active');
+            });
+        });
+        
+        // Edit profile functionality
+        const editProfileBtn = document.getElementById('edit-profile-btn');
+        const infoDisplay = document.getElementById('info-display');
+        const editForm = document.getElementById('edit-form');
+        const cancelEditBtn = document.getElementById('cancel-edit');
+        
+        editProfileBtn.addEventListener('click', function() {
+            infoDisplay.style.display = 'none';
+            editForm.style.display = 'block';
+        });
+        
+        cancelEditBtn.addEventListener('click', function() {
+            editForm.style.display = 'none';
+            infoDisplay.style.display = 'block';
+        });
+        
+        // Profile form submission
+        const profileForm = document.getElementById('profile-form');
+        profileForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // In a real app, this would send the data to a server
+            alert('Profile updated successfully!');
+            
+            // Hide form and show info display
+            editForm.style.display = 'none';
+            infoDisplay.style.display = 'block';
+        });
+    });
+</script>
+</body>
+</html>
+
+### CSS Files
+
+```css project="Krishi Bazaar" file="css/styles.css" type="code"
+/* Global Styles */
+:root {
+    --primary-color: #4CAF50;
+    --dark-color: #2E7D32;
+    --light-color: #E8F5E9;
+    --accent-color: #FF9800;
+    --text-color: #333;
+    --text-light: #666;
+    --border-color: #ddd;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--dark-color);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--dark-color);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 10px auto 0;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: center;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-color);
+    color: white;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--light-color);
+}
+
+.btn-sm {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+/* Header Styles */
+header {
+    background-color: white;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.nav-links ul {
+    display: flex;
+}
+
+.nav-links ul li {
+    margin-left: 30px;
+}
+
+.nav-links ul li a {
+    color: var(--text-color);
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-links ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: var(--transition);
+}
+
+.nav-links ul li a:hover::after,
+.nav-links ul li a.active::after {
+    width: 100%;
+}
+
+.nav-links ul li a.btn-login {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 5px;
+}
+
+.nav-links ul li a.btn-login:hover {
+    background-color: var(--dark-color);
+}
+
+.nav-links ul li a.btn-login::after {
+    display: none;
+}
+
+.fa-bars, .fa-times {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Features Section */
+.features {
+    padding: 80px 20px;
+}
+
+.features-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-icon {
+    width: 70px;
+    height: 70px;
+    background-color: var(--light-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.feature-icon i {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+.feature-card h3 {
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+/* How It Works Section */
+.how-it-works {
+    padding: 80px 20px;
+    background-color: var(--light-color);
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.steps-container::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    z-index: 1;
+}
+
+.step {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    width: 22%;
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 auto 20px;
+}
+
+.step h3 {
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+/* Featured Products Section */
+.featured-products {
+    padding: 80px 20px;
+}
+
+.products-slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px 0;
+    scroll-behavior: smooth;
+    cursor: grab;
+}
+
+.products-slider::-webkit-scrollbar {
+    height: 8px;
+}
+
+.products-slider::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.products-slider::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    min-width: 250px;
+    transition: var(--transition);
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.product-tag.organic {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.product-farmer {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.view-all-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 80px 20px;
+    background-color: var(--light-color);
+}
+
+.testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 550px;
+}
+
+.testimonial-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.testimonial-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-content p {
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.testimonial-content h4 {
+    color: var(--dark-color);
+    margin-bottom: 5px;
+}
+
+.testimonial-role {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* CTA Section */
+.cta {
+    padding: 80px 20px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/cta-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 50px 20px 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    width: 30%;
+    margin-bottom: 30px;
+}
+
+.footer-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+.footer-section p {
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: white;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    background-color: var(--primary-color);
+}
+
+.footer-section.links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section.links ul li a {
+    color: white;
+    transition: var(--transition);
+}
+
+.footer-section.links ul li a:hover {
+    color: var(--primary-color);
+    padding-left: 5px;
+}
+
+.footer-section.contact p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.footer-section.contact p i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Scroll to Top Button */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    z-index: 99;
+    transition: var(--transition);
+}
+
+#scrollTopBtn:hover {
+    background-color: var(--dark-color);
+}
+
+/* Page Header */
+.page-header {
+    background-color: var(--light-color);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    margin-bottom: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .nav-links {
+        position: fixed;
+        background-color: white;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 999;
+        transition: 0.5s;
+        box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-links ul {
+        flex-direction: column;
+        padding: 30px;
+    }
+    
+    .nav-links ul li {
+        margin: 15px 0;
+    }
+    
+    .fa-bars, .fa-times {
+        display: block;
+    }
+    
+    .fa-times {
+        margin: 20px;
+        font-size: 1.2rem;
+    }
+    
+    .steps-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .steps-container::before {
+        display: none;
+    }
+    
+    .step {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    .testimonial {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .testimonial-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .footer-section {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 15px 20px;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .cta h2 {
+        font-size: 2rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .feature-card {
+        padding: 20px;
+    }
+    
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .feature-icon i {
+        font-size: 1.5rem;
+    }
+}
+

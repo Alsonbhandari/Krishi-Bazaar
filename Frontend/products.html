@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Krishi Bazaar</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="Krishi Bazaar Logo">
+                <h1>Krishi Bazaar</h1>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="auth.html" class="btn-login">Login / Register</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>Browse Products</h1>
+        <p>Discover fresh produce directly from farmers</p>
+    </section>
+
+    <section class="products-section">
+        <div class="filter-sidebar">
+            <div class="filter-group">
+                <h3>Categories</h3>
+                <div class="filter-options">
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="vegetables" checked>
+                        <span>Vegetables</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="fruits" checked>
+                        <span>Fruits</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="grains" checked>
+                        <span>Grains</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="dairy" checked>
+                        <span>Dairy</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="other" checked>
+                        <span>Other</span>
+                    </label>
+                </div>
+            </div>
+            <div class="filter-group">
+                <h3>Price Range</h3>
+                <div class="price-range">
+                    <input type="range" min="0" max="1000" value="1000" class="price-slider" id="price-slider">
+                    <div class="price-inputs">
+                        <div class="price-input">
+                            <span>Rs</span>
+                            <input type="number" min="0" max="1000" value="0" id="min-price">
+                        </div>
+                        <div class="price-input">
+                            <span>Rs</span>
+                            <input type="number" min="0" max="1000" value="1000" id="max-price">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="filter-group">
+                <h3>Farming Method</h3>
+                <div class="filter-options">
+                    <label class="filter-option">
+                        <input type="checkbox" name="farming-method" value="organic" checked>
+                        <span>Organic</span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="farming-method" value="conventional" checked>
+                        <span>Conventional</span>
+                    </label>
+                </div>
+            </div>
+            <div class="filter-group">
+                <h3>Location</h3>
+                <select class="location-select">
+                    <option value="">All Locations</option>
+                    <option value="Dharan">Dharan</option>
+                    <option value="Biratnagar">Biratnagar</option>
+                    <option value="Itahari">Itahari</option>
+                    <option value="Kathmandu">Kathmandu</option>
+                    <option value="Chitwan">Chitwan</option>
+                </select>
+            </div>
+            <button class="btn btn-primary apply-filters">Apply Filters</button>
+            <button class="btn btn-secondary reset-filters">Reset Filters</button>
+        </div>
+        
+        <div class="products-container">
+            <div class="products-header">
+                <div class="products-count">Showing <span>12</span> products</div>
+                <div class="products-sort">
+                    <label for="sort-by">Sort by:</label>
+                    <select id="sort-by">
+                        <option value="relevance">Relevance</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Rating</option>
+                        <option value="newest">Newest</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/Tomato.jpeg" alt="Organic Tomatoes">
+                        <div class="product-tag organic">Organic</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Organic Tomatoes</h3>
+                        <p class="product-farmer">by Nikesh Shah</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.5 (120)</span>
+                        </div>
+                        <p class="product-price">Rs 40/kg</p>
+                        <a href="product-details.html" class="btn btn-sm">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/Potatoes" alt="Fresh Potatoes">
+                    </div>
+                    <div class="product-info">
+                        <h3>Fresh Potatoes</h3>
+                        <p class="product-farmer">by Mingma Gurung</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.0 (85)</span>
+                        </div>
+                        <p class="product-price">Rs 25/kg</p>
+                        <a href="product-details.html" class="btn btn-sm">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/onion.jpeg" alt="Organic Onions">
+                        <div class="product-tag organic">Organic</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Organic Onions</h3>
+                        <p class="product-farmer">by Nigam Shrestha</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5.0 (42)</span>
+                        </div>
+                        <p class="product-price">Rs 35/kg</p>
+                        <a href="product-details.html" class="btn btn-sm">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/Carrot.jpeg" alt="Fresh Carrots">
+                    </div>
+                    <div class="product-info">
+                        <h3>Fresh Carrots</h3>
+                        <p class="product-farmer">by Mishan Katuwal</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                            <span>3.5 (28)</span>
+                        </div>
+                        <p class="product-price">Rs 30/kg</p>
+                        <a href="product-details.html" class="btn btn-sm">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/apple.jpeg" alt="Fresh Apples">
+                        <div class="product-tag organic">Organic</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Fresh Apples</h3>
+                        <p class="product-farmer">by Bhoj Khadka</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.0 (56)</span>
+                        </div>
+                        <p class="product-price">Rs 120/kg</p>
+                        <a href="product-details.html" class="btn btn-sm">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/rice.jpeg" alt="Basmati Rice">
+                    </div>
+                    <div class="product-info">
+                        <h3>Basmati Rice</h3>
+                        <p class="product-farmer">by Bipin Karki</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.5 (112)</span>
+                        </div>
+                        <p class="product-price">Rs 90/kg</p>
+                        <a href="product-details.html" class="btn btn-sm">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/milk" alt="Fresh Milk">
+                        <div class="product-tag organic">Organic</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Fresh Milk</h3>
+                        <p class="product-farmer">by Nimesh Bista</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.0 (78)</span>
+                        </div>
+                        <p class="product-price">Rs 60/liter</p>
+                        <a href="product-details.html" class="btn btn-sm">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/wheat.jpeg" alt="Organic Wheat">
+                        <div class="product-tag organic">Organic</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Organic Wheat</h3>
+                        <p class="product-farmer">by Bishal karki</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5.0 (34)</span>
+                        </div>
+                        <p class="product-price">Rs 45/kg</p>
+                        <a href="product-details.html" class="btn btn-sm">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/orange" alt="Fresh Oranges">
+                    </div>
+                    <div class="product-info">
+                        <h3>Fresh Oranges</h3>
+                        <p class="product-farmer">by Kritim Bista</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <i class="far fa-star"></i>
+                            <span>3.5 (42)</span>
+                        </div>
+                        <p class="product-price">Rs 80/kg</p>
+                        <a href="product-details.html" class="btn btn-sm">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/cucumber.jpeg" alt="Fresh Cucumbers">
+                    </div>
+                    <div class="product-info">
+                        <h3>Fresh Cucumbers</h3>
+                        <p class="product-farmer">by Aftaf Alam</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.0 (23)</span>
+                        </div>
+                        <p class="product-price"> Rs 35/kg</p>
+                        <a href="product-details.html" class="btn btn-sm">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/Ghee..jpeg" alt="Pure Ghee">
+                        <div class="product-tag organic">Organic</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Pure Ghee</h3>
+                        <p class="product-farmer">by Oshish Katuwal</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.5 (67)</span>
+                        </div>
+                        <p class="product-price">Rs 650/kg</p>
+                        <a href="product-details.html" class="btn btn-sm">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/Cauliflower" alt="Fresh Cauliflower">
+                    </div>
+                    <div class="product-info">
+                        <h3>Fresh Cauliflower</h3>
+                        <p class="product-farmer">by Anish Bhandari</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.0 (31)</span>
+                        </div>
+                        <p class="product-price">Rs 30/piece</p>
+                        <a href="product-details.html" class="btn btn-sm">View Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pagination">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#" class="next">Next <i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About Krishi Bazaar</h3>
+                <p>Krishi Bazaar is a platform dedicated to connecting farmers directly with retailers, eliminating middlemen and ensuring better prices for all.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Barahakshetra-10, Sunsari, Nepal</p>
+                <p><i class="fas fa-phone"></i> +977 9804384180</p>
+                <p><i class="fas fa-envelope"></i> info@krishibazaar.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Krishi Bazaar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="scrollTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+

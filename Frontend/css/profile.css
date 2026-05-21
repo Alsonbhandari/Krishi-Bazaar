@@ -1,0 +1,403 @@
+/* Profile Page Styles */
+.profile-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: var(--shadow);
+  margin-bottom: 30px;
+}
+
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 30px;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-name {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+  color: var(--dark-color);
+}
+
+.profile-type {
+  display: inline-block;
+  background-color: var(--light-color);
+  color: var(--primary-color);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.profile-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  color: var(--text-light);
+}
+
+.meta-item i {
+  margin-right: 8px;
+  color: var(--primary-color);
+}
+
+.profile-actions {
+  margin-left: 20px;
+}
+
+.edit-profile {
+  background-color: var(--light-color);
+  color: var(--primary-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.edit-profile:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.edit-profile i {
+  margin-right: 8px;
+}
+
+.profile-tabs {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tab {
+  padding: 15px 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.tab.active {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.tab-content {
+  display: none;
+  padding: 30px;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.profile-section {
+  margin-bottom: 30px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--dark-color);
+}
+
+.info-group {
+  display: flex;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.info-group:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.info-label {
+  width: 200px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.info-value {
+  flex: 1;
+  color: var(--text-light);
+}
+
+.edit-btn {
+  background-color: var(--light-color);
+  color: var(--primary-color);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: all 0.3s;
+}
+
+.edit-btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.edit-form {
+  display: none;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.cancel-btn {
+  background-color: #f5f5f5;
+  color: #555;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.cancel-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.save-btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.save-btn:hover {
+  background-color: var(--dark-color);
+}
+
+.payment-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.payment-card {
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 20px;
+  position: relative;
+}
+
+.payment-card.default {
+  border-color: var(--primary-color);
+}
+
+.default-badge {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.card-type {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card-type i {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.card-number,
+.card-expiry {
+  margin-bottom: 15px;
+  color: var(--text-light);
+}
+
+.card-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.card-actions button {
+  background-color: var(--light-color);
+  color: var(--primary-color);
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.card-actions button:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.add-payment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed var(--border-color);
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.add-payment:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.add-payment i {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  background-color: #ccc;
+  border-radius: 34px;
+  margin-right: 10px;
+  transition: all 0.3s;
+}
+
+.toggle-switch::before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+input[type="checkbox"] {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+input[type="checkbox"]:checked + .toggle-switch {
+  background-color: var(--primary-color);
+}
+
+input[type="checkbox"]:checked + .toggle-switch::before {
+  transform: translateX(26px);
+}
+
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-avatar {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .profile-actions {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .tabs {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .info-group {
+    flex-direction: column;
+  }
+
+  .info-label {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .profile-meta {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .tab {
+    padding: 15px 20px;
+  }
+}
+

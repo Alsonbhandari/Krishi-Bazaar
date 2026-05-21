@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishi Bazaar - Connect Farmers to Retailers</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="Images/logo.jpg" alt="Krishi Bazaar Logo">
+                <h1>Krishi Bazaar</h1>
+            </div>
+
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Connecting Farmers Directly to Retailers</h1>
+            <p>Eliminate middlemen, get better prices, and support sustainable agriculture</p>
+            <div class="hero-buttons">
+                <a href="auth.html?type=farmer" class="btn btn-primary">Join as Farmer</a>
+                <a href="auth.html?type=retailer" class="btn btn-secondary">Join as Retailer</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <h2 class="section-title">Why Choose Krishi Bazaar?</h2>
+        <div class="features-container">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-hand-holding-usd"></i>
+                </div>
+                <h3>Better Prices</h3>
+                <p>Farmers get better prices for their produce by selling directly to retailers without middlemen.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <h3>Fresh Produce</h3>
+                <p>Retailers get access to fresh, high-quality produce directly from farms.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <h3>Direct Delivery</h3>
+                <p>Efficient logistics ensure timely delivery from farms to retail stores.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Easy Platform</h3>
+                <p>User-friendly platform makes it simple to buy and sell agricultural products.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="how-it-works">
+        <h2 class="section-title">How It Works</h2>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Register</h3>
+                <p>Sign up as a farmer or retailer on our platform.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>List Products</h3>
+                <p>Farmers list their products with details and pricing.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Connect</h3>
+                <p>Retailers browse and connect with farmers.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Trade</h3>
+                <p>Complete transactions securely through our platform.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-products">
+        <h2 class="section-title">Featured Products</h2>
+        <div class="products-slider">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Tomato.jpeg" alt="Organic Tomatoes">
+                </div>
+                <div class="product-info">
+                    <h3>Organic Tomatoes</h3>
+                    <p class="product-farmer">by Nikesh Shah</p>
+                    <p class="product-price">rs 40/kg</p>
+                    <a href="product-details.html" class="btn btn-sm">View Details</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Potatoes" alt="Fresh Potatoes">
+                </div>
+                <div class="product-info">
+                    <h3>Fresh Potatoes</h3>
+                    <p class="product-farmer">by Bidur Acharya</p>
+                    <p class="product-price">rs 25/kg</p>
+                    <a href="product-details.html" class="btn btn-sm">View Details</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/onion.jpeg" alt="Organic Onions">
+                </div>
+                <div class="product-info">
+                    <h3>Organic Onions</h3>
+                    <p class="product-farmer">by Nigam Shrestha</p>
+                    <p class="product-price">rs 35/kg</p>
+                    <a href="product-details.html" class="btn btn-sm">View Details</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images/Carrot.jpeg" alt="Fresh Carrots">
+                </div>
+                <div class="product-info">
+                    <h3>Fresh Carrots</h3>
+                    <p class="product-farmer">by Mishan katuwal</p>
+                    <p class="product-price">rs 30/kg</p>
+                    <a href="product-details.html" class="btn btn-sm">View Details</a>
+                </div>
+            </div>
+        </div>
+        <div class="view-all-container">
+            <a href="products.html" class="btn btn-secondary">View All Products</a>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2 class="section-title">What Our Users Say</h2>
+        <div class="testimonials-container">
+            <div class="testimonial">
+                <div class="testimonial-image">
+                    <img src="images/Samizyan.png" alt="Farmer Testimonial">
+                </div>
+                <div class="testimonial-content">
+                    <p>"Krishi Bazaar has transformed my farming business. I now get 30% better prices for my produce and have direct relationships with retailers."</p>
+                    <h4>Samizyan Limbu</h4>
+                    <p class="testimonial-role">Organic Farmer, Dharan</p>
+                </div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-image">
+                    <img src="images/Aftaf.png" alt="Retailer Testimonial">
+                </div>
+                <div class="testimonial-content">
+                    <p>"As a retailer, I can now source fresh produce directly from farmers. The quality is excellent, and my customers are very satisfied."</p>
+                    <h4>Aftaf Alam</h4>
+                    <p class="testimonial-role">Grocery Store Owner, Kathmandu</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="cta-content">
+            <h2>Ready to Transform Your Agricultural Business?</h2>
+            <p>Join thousands of farmers and retailers already benefiting from Krishi Bazaar.</p>
+            <div class="cta-buttons">
+                <a href="auth.html?type=farmer" class="btn btn-primary">Join as Farmer</a>
+                <a href="auth.html?type=retailer" class="btn btn-secondary">Join as Retailer</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About Krishi Bazaar</h3>
+                <p>Krishi Bazaar is a platform dedicated to connecting farmers directly with retailers, eliminating middlemen and ensuring better prices for all.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Barahakshetra-10, Sunsari, Nepal </p>
+                <p><i class="fas fa-phone"></i> +977 9804384180</p>
+                <p><i class="fas fa-envelope"></i> info@krishibazaar.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Krishi Bazaar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="scrollTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+

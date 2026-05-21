@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Krishi Bazaar</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/product-details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="Krishi Bazaar Logo">
+                <h1>Krishi Bazaar</h1>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="active">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="auth.html" class="btn-login">Login / Register</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav>
+    </header>
+
+    <div class="product-details-container">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> &gt;
+            <a href="products.html">Products</a> &gt;
+            <span>Organic Tomatoes</span>
+        </div>
+        
+        <div class="product-main">
+            <div class="product-gallery">
+                <div class="main-image">
+                    <img src="images/tomato.jpg" alt="Organic Tomatoes" id="main-product-image">
+                </div>
+                <div class="thumbnail-images">
+                    <img src="images/tomato.jpg" alt="Organic Tomatoes" class="thumbnail active" onclick="changeImage(this)">
+                    <img src="images/tomato-2.jpg" alt="Organic Tomatoes Side View" class="thumbnail" onclick="changeImage(this)">
+                    <img src="images/tomato-3.jpg" alt="Organic Tomatoes Close Up" class="thumbnail" onclick="changeImage(this)">
+                    <img src="images/tomato-4.jpg" alt="Organic Tomatoes Bunch" class="thumbnail" onclick="changeImage(this)">
+                </div>
+            </div>
+            
+            <div class="product-info">
+                <div class="product-tag organic">Organic</div>
+                <h1 class="product-title">Organic Tomatoes</h1>
+                <div class="product-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>4.5 (120 reviews)</span>
+                </div>
+                <div class="product-price">
+                    <span class="current-price">Rs 40/kg</span>
+                    <span class="original-price">Rs 50/kg</span>
+                    <span class="discount">20% OFF</span>
+                </div>
+                <div class="product-farmer">
+                    <img src="images/farmer1.jpg" alt="Farmer Manish Puri">
+                    <div class="farmer-info">
+                        <p>Sold by <a href="#">Manish Puri</a></p>
+                        <div class="farmer-rating">
+                            <i class="fas fa-star"></i> 4.8 | <span class="verified"><i class="fas fa-check-circle"></i> Verified Seller</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-availability">
+                    <i class="fas fa-check-circle"></i> In Stock (500 kg available)
+                </div>
+                <div class="product-description">
+                    <p>Fresh organic tomatoes grown without chemical pesticides or fertilizers. These tomatoes are rich in flavor, juicy, and perfect for salads, cooking, or making sauces.</p>
+                </div>
+                <div class="product-highlights">
+                    <h3>Highlights</h3>
+                    <ul>
+                        <li><i class="fas fa-leaf"></i> 100% Organic</li>
+                        <li><i class="fas fa-truck"></i> Harvested within 24 hours of delivery</li>
+                        <li><i class="fas fa-certificate"></i> Certified by Organic Food Council</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Grown in Dharan, Sunsari</li>
+                    </ul>
+                </div>
+                <div class="product-actions">
+                    <div class="quantity-selector">
+                        <button class="quantity-btn minus" onclick="decreaseQuantity()">-</button>
+                        <input type="number" value="1" min="1" id="quantity-input">
+                        <button class="quantity-btn plus" onclick="increaseQuantity()">+</button>
+                        <span class="quantity-unit">kg</span>
+                    </div>
+                    <button class="btn btn-primary add-to-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    <button class="btn btn-secondary buy-now-btn"><i class="fas fa-bolt"></i> Buy Now</button>
+                </div>
+                <div class="delivery-info">
+                    <div class="delivery-option">
+                        <i class="fas fa-truck"></i>
+                        <div>
+                            <h4>Fast Delivery</h4>
+                            <p>Delivery within 24-48 hours</p>
+                        </div>
+                    </div>
+                    <div class="delivery-option">
+                        <i class="fas fa-undo"></i>
+                        <div>
+                            <h4>Easy Returns</h4>
+                            <p>Return policy within 24 hours</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="product-details-tabs">
+            <div class="tabs">
+                <div class="tab active" data-tab="description">Description</div>
+                <div class="tab" data-tab="specifications">Specifications</div>
+                <div class="tab" data-tab="reviews">Reviews</div>
+                <div class="tab" data-tab="shipping">Shipping & Returns</div>
+            </div>
+            
+            <div class="tab-content active" id="description-content">
+                <h2>Product Description</h2>
+                <p>Our organic tomatoes are grown using sustainable farming practices without the use of synthetic pesticides or fertilizers. These tomatoes are harvested at peak ripeness to ensure maximum flavor and nutritional value.</p>
+                <p>Tomatoes are an excellent source of vitamin C, potassium, folate, and vitamin K. They are also a good source of the antioxidant lycopene, which has been linked to many health benefits, including reduced risk of heart disease and cancer.</p>
+                <h3>Growing Conditions</h3>
+                <p>These tomatoes are grown in nutrient-rich soil under optimal conditions. We use natural pest control methods and organic fertilizers to ensure the health of our plants and the quality of our produce.</p>
+                <h3>Harvesting and Handling</h3>
+                <p>Our tomatoes are hand-picked at the perfect stage of ripeness and carefully handled to prevent bruising. They are then sorted, packed, and delivered to you within 24-48 hours of harvesting to ensure maximum freshness.</p>
+                <h3>Storage Recommendations</h3>
+                <p>For best flavor, store tomatoes at room temperature and away from direct sunlight. Refrigeration can diminish their flavor and alter their texture. Use within 5-7 days of delivery for optimal taste and quality.</p>
+            </div>
+            
+            <div class="tab-content" id="specifications-content">
+                <h2>Product Specifications</h2>
+                <table class="specifications-table">
+                    <tr>
+                        <td>Product Type</td>
+                        <td>Organic Tomatoes</td>
+                    </tr>
+                    <tr>
+                        <td>Variety</td>
+                        <td>Roma</td>
+                    </tr>
+                    <tr>
+                        <td>Farming Method</td>
+                        <td>Organic</td>
+                    </tr>
+                    <tr>
+                        <td>Origin</td>
+                        <td>Biratnagar, Nepal</td>
+                    </tr>
+                    <tr>
+                        <td>Certification</td>
+                        <td>Nepal Food Council</td>
+                    </tr>
+                    <tr>
+                        <td>Shelf Life</td>
+                        <td>5-7 days at room temperature</td>
+                    </tr>
+                    <tr>
+                        <td>Packaging</td>
+                        <td>Eco-friendly biodegradable packaging</td>
+                    </tr>
+                    <tr>
+                        <td>Average Size</td>
+                        <td>Medium (5-7 cm diameter)</td>
+                    </tr>
+                    <tr>
+                        <td>Average Weight</td>
+                        <td>100-120 grams per tomato</td>
+                    </tr>
+                    <tr>
+                        <td>Color</td>
+                        <td>Bright Red</td>
+                    </tr>
+                    <tr>
+                        <td>Taste Profile</td>
+                        <td>Sweet with balanced acidity</td>
+                    </tr>
+                </table>
+                <h3>Nutritional Information (per 100g)</h3>
+                <table class="specifications-table">
+                    <tr>
+                        <td>Calories</td>
+                        <td>18 kcal</td>
+                    </tr>
+                    <tr>
+                        <td>Carbohydrates</td>
+                        <td>3.9 g</td>
+                    </tr>
+                    <tr>
+                        <td>Protein</td>
+                        <td>0.9 g</td>
+                    </tr>
+                    <tr>
+                        <td>Fat</td>
+                        <td>0.2 g</td>
+                    </tr>
+                    <tr>
+                        <td>Fiber</td>
+                        <td>1.2 g</td>
+                    </tr>
+                    <tr>
+                        <td>Vitamin C</td>
+                        <td>14 mg (23% DV)</td>
+                    </tr>
+                    <tr>
+                        <td>Potassium</td>
+                        <td>237 mg (7% DV)</td>
+                    </tr>
+                    <tr>
+                        <td>Vitamin K</td>
+                        <td>7.9 µg (10% DV)</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="tab-content" id="reviews-content">
+                <div class="reviews-header">
+                    <h2>Customer Reviews</h2>
+                    <div class="overall-rating">
+                        <div class="rating-number">4.5</div>
+                        <div class="rating-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="rating-count">Based on 120 reviews</div>
+                    </div>
+                    <button class="btn btn-primary write-review-btn">Write a Review</button>
+                </div>
+                
+                <div class="rating-breakdown">
+                    <div class="rating-bar">
+                        <div class="rating-label">5 Star</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 70%"></div>
+                        </div>
+                        <div class="rating-percent">70%</div>
+                    </div>
+                    <div class="rating-bar">
+                        <div class="rating-label">4 Star</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 20%"></div>
+                        </div>
+                        <div class="rating-percent">20%</div>
+                    </div>
+                    <div class="rating-bar">
+                        <div class="rating-label">3 Star</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 5%"></div>
+                        </div>
+                        <div class="rating-percent">5%</div>
+                    </div>
+                    <div class="rating-bar">
+                        <div class="rating-label">2 Star</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 3%"></div>
+                        </div>
+                        <div class="rating-percent">3%</div>
+                    </div>
+                    <div class="rating-bar">
+                        <div class="rating-label">1 Star</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 2%"></div>
+                        </div>
+                        <div class="rating-percent">2%</div>
+                    </div>
+                </div>
+                
+                <div class="reviews-list">
+                    <div class="review-item">
+                        <div class="reviewer-info">
+                            <img src="images/user1.jpg" alt="Reviewer" class="reviewer-avatar">
+                            <div>
+                                <h4>rama Poudel</h4>
+                                <div class="review-date">Posted on June 15, 2023</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="review-title">Excellent quality tomatoes!</div>
+                        <div class="review-content">
+                            <p>These tomatoes are absolutely delicious! They are juicy, flavorful, and perfect for my salads. I appreciate that they are organic and sustainably grown. Will definitely order again.</p>
+                        </div>
+                        <div class="review-images">
+                            <img src="images/review-tomato1.jpg" alt="Customer Review Image">
+                            <img src="images/review-tomato2.jpg" alt="Customer Review Image">
+                        </div>
+                    </div>
+                    
+                    <div class="review-item">
+                        <div class="reviewer-info">
+                            <img src="images/user2.jpg" alt="Reviewer" class="reviewer-avatar">
+                            <div>
+                                <h4>Alson Raj Bhandari</h4>
+                                <div class="review-date">Posted on June 10, 2023</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <div class="review-title">Good tomatoes, fast delivery</div>
+                        <div class="review-content">
+                            <p>The tomatoes were fresh and tasty. Delivery was prompt and packaging was good. Taking off one star because a couple of tomatoes were slightly bruised, but overall a good purchase.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="review-item">
+                        <div class="reviewer-info">
+                            <img src="images/user3.jpg" alt="Reviewer" class="reviewer-avatar">
+                            <div>
+                                <h4>Aftaf Alam</h4>
+                                <div class="review-date">Posted on June 5, 2023</div>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="review-title">Very fresh and flavorful</div>
+                        <div class="review-content">
+                            <p>These tomatoes are much better than what I get at the local market. They are very fresh and have an excellent flavor. I used them to make sauce and it turned out amazing. Will buy again!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pagination">
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#" class="next">Next <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="shipping-content">
+                <h2>Shipping Information</h2>
+                <div class="shipping-info">
+                    <h3>Delivery Areas</h3>
+                    <p>We currently deliver to the following areas:</p>
+                    <ul>
+                        <li>Dharan</li>
+                        <li>Biratnagar</li>
+                        <li>kathmandu</li>
+                        <li>Itahari</li>
+                    </ul>
+                    
+                    <h3>Delivery Timeframes</h3>
+                    <p>We strive to deliver your products as quickly as possible to ensure maximum freshness:</p>
+                    <ul>
+                        <li><strong>Local Areas (within 50 km):</strong> Same day or next day delivery</li>
+                        <li><strong>Regional Areas (50-200 km):</strong> 1-2 business days</li>
+                        <li><strong>Extended Areas (200+ km):</strong> 2-3 business days</li>
+                    </ul>
+                    
+                    <h3>Shipping Costs</h3>
+                    <table class="shipping-table">
+                        <tr>
+                            <th>Order Value</th>
+                            <th>Shipping Fee</th>
+                        </tr>
+                        <tr>
+                            <td>Below Rs 500</td>
+                            <td>Rs 50</td>
+                        </tr>
+                        <tr>
+                            <td>Rs 500 - Rs 999</td>
+                            <td>Rs 30</td>
+                        </tr>
+                        <tr>
+                            <td>Rs 1000 and above</td>
+                            <td>FREE</td>
+                        </tr>
+                    </table>
+                    
+                    <h3>Packaging</h3>
+                    <p>All our products are carefully packed in eco-friendly, biodegradable packaging to maintain freshness and minimize environmental impact. We use specialized packaging for delicate items to prevent damage during transit.</p>
+                    
+                    <h2>Return Policy</h2>
+                    <p>We want you to be completely satisfied with your purchase. If you're not happy with the quality of the products you receive, please contact us within 24 hours of delivery.</p>
+                    
+                    <h3>Return Process</h3>
+                    <ol>
+                        <li>Contact our customer service team within 24 hours of receiving your order.</li>
+                        <li>Provide order details and reason for return.</li>
+                        <li>Our team will arrange for pickup of the items.</li>
+                        <li>Once we receive and verify the returned items, we will process your refund or replacement.</li>
+                    </ol>
+                    
+                    <h3>Refund Policy</h3>
+                    <p>Refunds will be processed within 3-5 business days after we receive and inspect the returned items. The refund will be credited back to the original payment method used for the purchase.</p>
+                    
+                    <h3>Non-Returnable Items</h3>
+                    <p>Due to the perishable nature of our products, we cannot accept returns for:</p>
+                    <ul>
+                        <li>Items returned more than 24 hours after delivery</li>
+                        <li>Products that show signs of consumption or use</li>
+                        <li>Products that have been mishandled or damaged after delivery</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="related-products">
+            <h2 class="section-title">You May Also Like</h2>
+            <div class="products-slider">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/potato.jpg" alt="Fresh Potatoes">
+                    </div>
+                    <div class="product-info">
+                        <h3>Fresh Potatoes</h3>
+                        <p class="product-farmer">by Bebish Shrestha</p>
+                        <p class="product-price">Rs 25/kg</p>
+                        <a href="product-details.html" class="btn btn-sm">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/onion.jpg" alt="Organic Onions">
+                        <div class="product-tag organic">Organic</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Organic Onions</h3>
+                        <p class="product-farmer">by Nigam Shrestha </p>
+                        <p class="product-price">Rs 35/kg</p>
+                        <a href="product-details.html" class="btn btn-sm">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/carrot.jpg" alt="Fresh Carrots">
+                    </div>
+                    <div class="product-info">
+                        <h3>Fresh Carrots</h3>
+                        <p class="product-farmer">by Mishan Katuwal</p>
+                        <p class="product-price">Rs 30/kg</p>
+                        <a href="product-details.html" class="btn btn-sm">View Details</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/cucumber.jpg" alt="Fresh Cucumbers">
+                    </div>
+                    <div class="product-info">
+                        <h3>Fresh Cucumbers</h3>
+                        <p class="product-farmer">by Dhiren Shah</p>
+                        <p class="product-price">Rs 35/kg</p>
+                        <a href="product-details.html" class="btn btn-sm">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About Krishi Bazaar</h3>
+                <p>Krishi Bazaar is a platform dedicated to connecting farmers directly with retailers, eliminating middlemen and ensuring better prices for all.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Barahakshetra-10, Sunsari, Nepal</p>
+                <p><i class="fas fa-phone"></i> +977 9804384180</p>
+                <p><i class="fas fa-envelope"></i> info@krishibazaar.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Krishi Bazaar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="scrollTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Product image gallery
+        function changeImage(element) {
+            document.getElementById('main-product-image').src = element.src;
+            
+            // Update active thumbnail
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            thumbnails.forEach(thumb => thumb.classList.remove('active'));
+            element.classList.add('active');
+        }
+        
+        // Quantity selector
+        function increaseQuantity() {
+            const input = document.getElementById('quantity-input');
+            input.value = parseInt(input.value) + 1;
+        }
+        
+        function decreaseQuantity() {
+            const input = document.getElementById('quantity-input');
+            if (parseInt(input.value) > 1) {
+                input.value = parseInt(input.value) - 1;
+            }
+        }
+        
+        // Tab switching
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.tab');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Update active tab
+                    tabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Show corresponding tab content
+                    const tabId = this.getAttribute('data-tab');
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    document.getElementById(`${tabId}-content`).classList.add('active');
+                });
+            });
+            
+            // Add to cart functionality
+            const addToCartBtn = document.querySelector('.add-to-cart-btn');
+            addToCartBtn.addEventListener('click', function() {
+                const quantity = document.getElementById('quantity-input').value;
+                alert(`Added ${quantity}kg of Organic Tomatoes to your cart!`);
+            });
+            
+            // Buy now functionality
+            const buyNowBtn = document.querySelector('.buy-now-btn');
+            buyNowBtn.addEventListener('click', function() {
+                const quantity = document.getElementById('quantity-input').value;
+                alert(`Proceeding to checkout with ${quantity}kg of Organic Tomatoes!`);
+                // In a real app, this would redirect to checkout page
+            });
+            
+            // Write review functionality
+            const writeReviewBtn = document.querySelector('.write-review-btn');
+            writeReviewBtn.addEventListener('click', function() {
+                alert('Write a review functionality will be implemented here!');
+                // In a real app, this would open a review form
+            });
+        });
+    </script>
+</body>
+</html>
+
